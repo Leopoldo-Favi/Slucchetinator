@@ -233,20 +233,24 @@ int main(int argc, char** argv) {
 	
 	file.close();
 	
-	cout << "immetti posizione (da 0) e numero che vuoi controllare" << endl;
-	int pos; //posizione del numero 	
-	char num; //numero 
-	cin >> pos;
-	cin >> num;
 	
-	
-	//visualizza solo le combinazioni con un numero in una posizione
-	
-	for(int i=0; i<Ncombinazioni; i++)
+	while(true) //fallo all infinito
 	{
-		if(combinazioni[i].at(pos) == num)
+		cout << "immetti posizione (da 0) e numero che vuoi controllare" << endl;
+		int pos; //posizione del numero 	
+		char num; //numero 
+		cin >> pos;
+		cin >> num;
+		
+		
+		//visualizza solo le combinazioni con un numero in una posizione
+		
+		for(int i=0; i<Ncombinazioni; i++)
 		{
-			cout << combinazioni[i] << endl;
+			if(combinazioni[i].at(pos) == num)
+			{
+				cout << combinazioni[i] << endl;
+			}
 		}
 	}
 	
